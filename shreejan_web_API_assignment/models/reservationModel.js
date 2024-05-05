@@ -1,20 +1,22 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const reservationSchema = mongoose.Schema({
-  userId: {
-    type: Number,
-    required: true,
-  },
-  eventDate: {
-    type: Date,
-    required: true,
-  },
-  numberOfGuest: {
-    type: Number,
-    required: true,
-  },
-});
+const reservationControllers = new mongoose.Schema({
 
-const Reservation = mongoose.model("reservation", reservationSchema);
+    userId: {
+        type: Number,
+        required: true
+    },
+    eventDate: {
+        type: Date,
+        required: true
+    },
+    numberOfGuests : {
+        type : Number,
+        required : true
+    }
 
+})
+
+
+const Reservation = mongoose.model('reservation', reservationControllers)
 module.exports = Reservation;

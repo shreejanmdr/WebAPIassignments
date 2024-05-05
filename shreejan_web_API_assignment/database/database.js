@@ -1,13 +1,15 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
-const dotenv = require("dotenv");
-
-dotenv.config();
+// External file
+// Function (Connection)
+// Make a unique function name 
+// export 
 
 const connectDatabase = () => {
-  mongoose.connect(process.env.MONGODB_CLOUD).then(() => {
-    console.log("Databse Connected");
-  });
-};
+    mongoose.connect(process.env.MONGODB_CLOUD).then(()=>{
+    console.log("Database connected ")
+})
+}
 
-module.exports = connectDatabase;
+//Exporting the function 
+module.exports = connectDatabase
